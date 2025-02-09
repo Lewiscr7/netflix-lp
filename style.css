@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     width: 100%;
     height: 100%;
@@ -10,126 +11,116 @@ body {
     background-color: black;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.container::before{
+
+.container::before {
     content: "";
-    background: url(images/netflix.jpg)  no-repeat center center/cover;
+    background: url(images/netflix.jpg) no-repeat center center/cover;
     position: absolute;
     height: 100%;
     width: 100%;
     opacity: 0.3;
     z-index: -1;
 }
-.container .navbar{
+
+.container .navbar {
     height: 100px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
 }
-.container .navbar .left{
-    height: 100%;
-    display: flex;
-    float: left;
-}
+
 .container .navbar .left img {
     height: 100px;
-    position: absolute;
-    left: 35px;
 }
-.container .navbar .right{
+
+.container .navbar .right {
     display: flex;
-    height: 100px;
-    float: right;
-    position: absolute;
-    right: 50px;
-}
-.container .navbar .right .language{
-    margin: auto;
     align-items: center;
-    justify-content: center;
+}
+
+.container .navbar .right .language {
     font-size: 18px;
     padding: 7px 70px;
-    color: white;
     background: none;
+    color: white;
     cursor: pointer;
     margin-right: 15px;
 }
-.container .navbar .right .language option{
+
+.container .navbar .right .language option {
     background-color: grey;
 }
-.container .navbar .right button {
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+
+.container .navbar .right .sign-in-link {
     font-size: 18px;
     font-weight: 400;
     padding: 7px 17px;
     background: #e50914;
-    cursor: pointer;
-    outline: none;
-    border-radius: 4px;
-    border: none;
-}
-.container .navbar .right button a{
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
 }
-.container .title{
+
+.container .navbar .right .sign-in-link:hover {
+    background: #f40612;
+}
+
+.container .title {
     padding: 70px 45px;
+    text-align: center;
 }
-.container .title .content{
-    width: 950px;
+
+.container .title .content {
+    max-width: 950px;
     margin: auto;
     padding: 75px 0;
-    text-align: center;
 }
-.container .title .content h1{
-width: 650px;
-margin: auto;
-font-size: 3.1rem;
-text-align: center;
+
+.container .title .content h1 {
+    max-width: 650px;
+    margin: auto;
+    font-size: 3.1rem;
 }
-.container .title .content h2{
-    width: 650px;
+
+.container .title .content h2 {
+    max-width: 650px;
     margin: auto;
     font-size: 1.6rem;
-    text-align: center;
-    }
-.container .title .content form h3{
-        font-size: 1rem;
-        margin: 18px 0;
-        text-align: center;
-    }
-.container .title .content form .email{
-        width: 1000px;
-        margin: auto;
-    }
+}
 
-.container .title .content form .email input{
-        height: 60px;
-        width: 450px;
-        margin: auto;
-        padding: 20px;
-        font-size: 20px;
-        outline: none;
-    }
-.container .title .content form .email button{
-    margin: auto;
+.container .title .content form h3 {
+    font-size: 1rem;
+    margin: 18px 0;
+}
+
+.container .title .content form .email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .title .content form .email input {
+    height: 60px;
+    width: 450px;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+}
+
+.container .title .content form .start-btn {
     height: 60px;
     width: 180px;
-    align-items: center;
-    justify-content: center;
     font-size: 20px;
-    padding: 7px 17px;
     background: #e50914;
-    cursor: pointer;
-    outline: none;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    border: none;
-    margin-left: -5px;
-}
-.container .title .content form .email button:hover{
-    background-color: #f40612;
-}
-.container .title .content form .email button a{
-    text-decoration: none;
     color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.container .title .content form .start-btn:hover {
+    background-color: #f40612;
 }
